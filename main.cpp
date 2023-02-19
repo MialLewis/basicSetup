@@ -1,7 +1,8 @@
 #pragma once
-#include "kernel/inc/helloWorld.h"
+#include "api/inc/helloWorld.h"
 
 int main(){
-    basicSetup::kernel::helloWorld test;
+    basicSetup::api::helloWorld test;
+    basicSetup::api::helloWorld test2("Mial");
     return 0;
 }

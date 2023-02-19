@@ -1,5 +1,5 @@
 set(SRC_FILES
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/helloWorld.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/printer.cpp
 )
 
 #create library from src and inc
