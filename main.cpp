@@ -1,5 +1,5 @@
 #pragma once
-#include "api/inc/helloWorld.h"
+#include "basicSetupApi/helloWorld.h"
 
 int main(){
     basicSetup::api::helloWorld test;

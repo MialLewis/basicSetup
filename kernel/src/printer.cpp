@@ -1,5 +1,4 @@
-#pragma once
-#include "../inc/printer.h"
+#include "basicSetupKernel/printer.h"
 
 basicSetup::kernel::printer::printer(const std::string &str){
     _print(str);
