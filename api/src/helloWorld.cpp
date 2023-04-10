@@ -1,4 +1,3 @@
-#pragma once
 #include "basicSetupApi/helloWorld.h"
 #include "basicSetupKernel/printer.h"
 
