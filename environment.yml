@@ -1,0 +1,6 @@
+name: basic-setup
+
+dependencies:
+  - python
+  - pybind11
+  - cmake
