@@ -1,6 +1,6 @@
 # Basic Setup
 
-This is a repository that represent a basic, minimal, c++ project setup using cmake. This currently includes:
+This is a repository that represents a basic, minimal, c++ project setup using cmake and conda. This currently includes:
 - Creation of a `kernel` library.
 - Creation of an `api` library to expose this `kernel` library.
 - Creation of a python interface to enable access to the `api` from python.
@@ -10,7 +10,10 @@ Instructions to this regard are in the following section.
 
 ## Pre-setup requirements
 
-Clone this repository and ensure `conda` is installed.
+- Clone this repository
+- Ensure `conda` (or preferably `mamba`) is installed.
+- Ensure `msbuildtools` are available, and on the path.
+
 
 ## Setup
 
@@ -27,5 +30,5 @@ Clone this repository and ensure `conda` is installed.
 
 ## Testing the repo setup
 
-1. To test setup has been successfull, from the repository root run: `python -c "from basicSetupApi import helloWorld; helloWorld(<your name>)"`
+1. To test that the setup has been successfull, from the repository root run: `python -c "from basicSetupApi import helloWorld; helloWorld(<your name>)"`
 
