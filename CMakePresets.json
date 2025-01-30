@@ -7,13 +7,25 @@
     },
     "configurePresets": [
         {
-            "name": "windows-default",
+            "name": "win-msbuild",
             "displayName": "Windows x64 Debug",
             "description": "Sets msvc generator, compilers, x64 architecture, build and install directory, debug build type",
             "generator": "Visual Studio 17 2022",
             "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
             "CMAKE_BUILD_TYPE": "Debug"
+            }
+	},
+	{
+            "name": "win-ninja",
+            "displayName": "Windows x64 Debug Ninja",
+            "description": "Sets ninja generator, compilers, x64 architecture, build and install directory, debug build type",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+            "CMAKE_BUILD_TYPE": "Debug",
+	    "CMAKE_C_COMPILER": "cl",
+            "CMAKE_CXX_COMPILER": "cl"
             }
         }
     ]
