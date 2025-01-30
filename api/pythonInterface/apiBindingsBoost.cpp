@@ -12,9 +12,15 @@ public:
     const double getReal() const { return m_real; }
     const double getImaginary() const { return m_imaginary; }
 
-    ComplexNumber ComplexNumber::operator+(const ComplexNumber& rhs) { return ComplexNumber(m_real + rhs.getReal(), m_imaginary + rhs.getImaginary()); }
-    ComplexNumber ComplexNumber::operator-(const ComplexNumber& rhs) { return ComplexNumber(m_real - rhs.getReal(), m_imaginary - rhs.getImaginary()); }
-    void print() { std::cout << m_real << " + " << m_imaginary << "i"; }
+    ComplexNumber ComplexNumber::operator+(const ComplexNumber& rhs) {
+        std::cout << "operator+ executed" << std::endl;
+        return ComplexNumber(m_real + rhs.getReal(), m_imaginary + rhs.getImaginary());
+    }
+    ComplexNumber ComplexNumber::operator-(const ComplexNumber& rhs) {
+        std::cout << "operator- executed" << std::endl;
+        return ComplexNumber(m_real - rhs.getReal(), m_imaginary - rhs.getImaginary());
+    }
+    void print() const { std::cout << m_real << " + " << m_imaginary << "i"; }
 };
 
 
@@ -28,7 +34,7 @@ BOOST_PYTHON_MODULE(api_boost) {
     def("add", add);
 
     class_<ComplexNumber>("ComplexNumber", init<double, double>())
-        .def("__sub__", &ComplexNumber::operator-, (arg("left"), arg("right")))
-        .def("__add__", &ComplexNumber::operator+, (arg("left"), arg("right")))
+        .def(self - self)
+        .def(self + self)
         .def("print", &ComplexNumber::print);
 }

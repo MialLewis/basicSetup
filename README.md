@@ -52,6 +52,8 @@ Instructions to this regard are in the following section.
 
 1. To test that the setup has been successfull, from the repository root run: `python -c "from basicSetupApi import helloWorld; helloWorld('<your name>')"`
 
+2. Alternatively (for boost api): `python -c "from api_boost import ComplexNumber; (ComplexNumber(2,5) + ComplexNumber(3,4)).print()"`
+
 ## Running cppcheck
 
 1. As of the latest version of cppcheck on `conda-forge`, `2.15.0`, there is a bug causing cppcheck to look for `cfg` files in the wrong location:

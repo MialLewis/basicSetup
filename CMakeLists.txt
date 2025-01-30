@@ -39,6 +39,7 @@ set(CPPCHECK_ARGS
     --std=c++${CMAKE_CXX_STANDARD} # use the standard from cmake
     --cppcheck-build-dir="${CPPCHECK_BUILD_DIR}/cache"
     --project="${CMAKE_BINARY_DIR}/compile_commands.json"
+    --suppress=missingIncludeSystem
 )
 
 if(CPPCHECK_EXECUTABLE)
