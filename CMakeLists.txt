@@ -25,7 +25,6 @@ add_executable(basicSetup main.cpp)
 target_link_libraries(basicSetup PUBLIC kernel api)
 
 # Set up cppcheck
-
 # Set up cppcheck build directory and cache
 set(CPPCHECK_BUILD_DIR "${CMAKE_BINARY_DIR}/cppcheck")
 file(MAKE_DIRECTORY "${CPPCHECK_BUILD_DIR}" "${CPPCHECK_BUILD_DIR}/cache")

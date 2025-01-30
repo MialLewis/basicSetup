@@ -23,8 +23,6 @@ public:
     void print() const { std::cout << m_real << " + " << m_imaginary << "i"; }
 };
 
-
-
 int add(int a, int b) {
     return a + b;
 }
